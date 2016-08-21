@@ -1,0 +1,10 @@
+version: '2'
+services:
+  web:
+    image: ${USER}/docker-devbox-base
+    volumes:
+      - "~/.ssh/id_rsa:/home/${USER}/.ssh/id_rsa"
+      - "~/.ssh/authorized_keys:/home/${USER}/.ssh/authorized_keys"
+      - "~/devbox:/home/${USER}/mount"
+    ports:
+      - "33322:22"
