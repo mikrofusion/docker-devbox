@@ -6,7 +6,10 @@ Install docker (https://www.docker.com/products/docker).
 Install XQuarts (https://www.xquartz.org/) for copy/paste between systems.
 Note: ensure syncing is enabled under XQuartz -> Preferences -> Pasteboard
 
-clone repo, cd into repo, and run ` make `
+clone repo, cd into repo, and run
+` make `
+
+when you are done run `make stop`
 
 Put this in ``` ~/.ssh/config ``` (making sure to replace the username which whatever your $USER is):
 
@@ -49,6 +52,7 @@ gh-auth add --users=$USER
 
 # Boxes
 
-The following devbox containers can be built from this repo:
+The following devbox variants currently exist:
 
-* [elixir-postgres](./docker-devbox-elixir-postgres)
+* [base](./base)
+* [elixir-postgres](./elixir-postgres)

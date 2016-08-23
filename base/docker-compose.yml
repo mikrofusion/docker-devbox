@@ -1,7 +1,12 @@
 version: '2'
 services:
   web:
-    image: ${USER}/docker-devbox-base
+    container_name: "devbox-base"
+    build:
+      context: .
+      args:
+        user: "${USER}"
+    image: "devbox-base"
     volumes:
       - "~/.ssh/id_rsa:/home/${USER}/.ssh/id_rsa"
       - "~/.ssh/authorized_keys:/home/${USER}/.ssh/authorized_keys"

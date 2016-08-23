@@ -1,7 +1,12 @@
 version: '2'
 services:
   web:
-    image: ${USER}/docker-devbox-elixir-postgres
+    container_name: "devbox-elixir-postgres"
+    build:
+      context: .
+      args:
+        user: "${USER}"
+    image: "devbox-elixir-postgres"
     volumes:
       - "~/.ssh/id_rsa:/home/${USER}/.ssh/id_rsa"
       - "~/.ssh/authorized_keys:/home/${USER}/.ssh/authorized_keys"

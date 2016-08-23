@@ -3,6 +3,8 @@ MAINTAINER Mike Groseclose <mike.groseclose@gmail.com>
 
 ARG user
 
+RUN echo "user: $user"
+
 RUN apt-get update
 
 RUN apt-get install -y \

@@ -144,3 +144,8 @@ bind-key -n C-n next-window
 bind-key -n C-p previous-window
 
 run-shell ~/.tmux/plugins/tmux-yank/yank.tmux
+
+bind -r < resize-pane -L 3
+bind -r > resize-pane -R 3
+bind -r + resize-pane -U 2
+bind -r = resize-pane -D 2

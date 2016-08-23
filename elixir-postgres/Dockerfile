@@ -1,7 +1,7 @@
-FROM __user__/devbox-base
+FROM devbox-base
 MAINTAINER Mike Groseclose <mike.groseclose@gmail.com>
 
-ARG user=__user__
+ARG user
 
 # install as root
 USER root
