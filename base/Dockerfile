@@ -30,6 +30,10 @@ RUN apt-get install -y openssh-server &&\
     mkdir /var/run/sshd &&\
     sed -i 's/AllowAgentForwarding no/AllowAgentForwarding yes/' /etc/ssh/sshd_config
 
+# X11 display
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y xorg
+RUN apt-get install -y openbox
+
 # set up user
 RUN adduser --disabled-password $user
 RUN adduser $user sudo
@@ -67,6 +71,9 @@ RUN git clone https://github.com/tmux-plugins/tmux-yank ~/.tmux/plugins/tmux-yan
 
 # git
 ADD gitconfig /home/$user/.gitconfig
+
+# heroku toolbelt
+RUN wget -O- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 
 # expose ports
 EXPOSE 22

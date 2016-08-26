@@ -16,7 +16,7 @@ Put this in ``` ~/.ssh/config ``` (making sure to replace the username which wha
 ```
 Host devbox
   HostName localhost
-  Port 33322
+  Port 22
   User <insert your username here>
   ForwardAgent true
   # required for copy / paste between systems

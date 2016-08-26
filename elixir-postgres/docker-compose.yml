@@ -12,8 +12,12 @@ services:
       - "~/.ssh/authorized_keys:/home/${USER}/.ssh/authorized_keys"
       - "~/devbox:/home/${USER}/mount"
     ports:
-      - "33322:22"
+      - "22:22"
+      - "80:80"
+      - "3000:3000"
       - "4000:4000"
+      - "8000:8000"
+      - "8100:8100"
     depends_on:
       - postgres
   postgres:
