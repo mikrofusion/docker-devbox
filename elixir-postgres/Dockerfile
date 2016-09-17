@@ -1,6 +1,8 @@
 FROM devbox-base
 MAINTAINER Mike Groseclose <mike.groseclose@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 ARG user
 
 # install as root

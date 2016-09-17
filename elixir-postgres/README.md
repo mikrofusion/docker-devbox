@@ -47,3 +47,6 @@ in config/dev.exs
 
 $ mix ecto.create
 $ mix phoenix.server
+
+and for specs
+$ env MIX_ENV=TEST mix ecto.create 

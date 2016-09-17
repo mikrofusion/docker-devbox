@@ -56,3 +56,7 @@ The following devbox variants currently exist:
 
 * [base](./base)
 * [elixir-postgres](./elixir-postgres)
+
+# Known Issues
+
+Running Vim inside the first TMUX pane created will not allow seamless navigation between splits (workaround is to just kill the first split).

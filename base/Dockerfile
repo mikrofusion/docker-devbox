@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 MAINTAINER Mike Groseclose <mike.groseclose@gmail.com>
 
+ENV DEBIAN_FRONTEND noninteractive
+
 ARG user
 
 RUN echo "user: $user"
@@ -31,7 +33,7 @@ RUN apt-get install -y openssh-server &&\
     sed -i 's/AllowAgentForwarding no/AllowAgentForwarding yes/' /etc/ssh/sshd_config
 
 # X11 display
-RUN DEBIAN_FRONTEND=noninteractive apt-get install -y xorg
+RUN apt-get install -y xorg
 RUN apt-get install -y openbox
 
 # set up user
